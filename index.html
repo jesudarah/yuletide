@@ -34,7 +34,7 @@
         </div>
 
         <div class="column">
-            <img src="img/iphone-list.png" alt="iphone" width="100%">
+            <img src="img/iphone-list.png" alt="iphone" width="90%">
         </div>
 
         <div class="column">
@@ -42,21 +42,38 @@
             <button><strong>WRITE US</strong> </button>
         </div>
 
-        <div class="column">
+        <div class="column column2">
             <p>Please write us and let us know what your heart desires are.</p>
             <form>
                 <fieldset>
-                    <input type="text" name="useremail" placeholder="E-mail"><br><br>
-                    <input type="text" name="usermessage" class="wide" placeholder="Type your message here">
+                    <input id="input-mail" required="" oninput="checkUserInput()" type="email" placeholder="E-mail"><br><br>
+                    <textarea name="text" id="input-message" required="" oninput="checkUserInput()" placeholder="Type your message here" rows="10" cols="30"></textarea>
                 </fieldset>
             </form>
-            <button class="button"><strong>SEND</strong></button>
+            <button class="button submit-button"><strong>SEND</strong></button>
         </div>
 
-        <div class="column">
-                <img src="img/ipad.png" alt="ipad" width="100%">
+        <div class="column wide">
+                <img src="img/ipad.png" alt="ipad" width="500px">
         </div>
     </div>
      
+    <script>
+    var inputMail = document.getElementById('input-mail');
+  var inputMessage = document.getElementById('input-message');
+  var button = document.querySelector('.submit-button');
+
+  var redEx = /\S+@\S+\.\S+/;
+
+ function checkUserInput() {
+    if (redEx.test(inputMail.value) && inputMessage.value.trim() !== "") {
+        button.style.backgroundColor = "rgb(295, 126, 0)";
+        button.disabled = false;
+    } else {
+        button.style.backgroundColor = "red";
+        button.disabled = true;
+    }
+}
+    </script>
 </body>
 </html>

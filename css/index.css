@@ -27,7 +27,7 @@
 }
 
 body{
-    width:66.66%;
+    width:70%;
     margin:auto;
     background-color: gray;
     color:white;
@@ -43,10 +43,10 @@ p{
 .column{
  float:left;
  width:60%;
-
+ margin-bottom:40px;
 }
 .column img{
-margin:20px;
+margin:10px;
 }
 .column h1{
     font-size:50px;
@@ -61,6 +61,7 @@ button{
 .button:hover{
     background-color: red;
 }
+.column2{width:40%; float:left;font-size:16px;margin-bottom:40px;}
 fieldset{
     border:none;
     margin: 30px 0 0 0;
@@ -74,10 +75,12 @@ input{
     padding:10px;
     font-size: 18px;
 }
-
-.wide{
-    height:200px;
-    width:200px;
+textarea{
+    background-color: gray;
+    border: 1px solid white;
+    font-size:18px;
+    border-radius:10px;
+    color:white;
 }
 
 @media only screen and (max-width:800px){
@@ -107,9 +110,10 @@ input{
     input{
        padding:5px;
     }
-    .wide{
+    .wide img{
         width:300px;
     }
+    
 }
 
 @media only screen and (min-width:800px){
@@ -121,4 +125,11 @@ input{
         margin-right: 20px;
         margin-top: 1px;
     }
+
+    textarea{
+        width:200px;
+        height:200px;
+    }
+    .column2{width:40%; float:left;font-size:16px;margin-bottom:40px;}
+    
 }
