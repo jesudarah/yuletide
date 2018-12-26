@@ -4,7 +4,9 @@
     padding:0;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+.container{
+    margin-top:5px;
+}
 .container ul{
     list-style-type:none;
 }
@@ -14,7 +16,11 @@
     font-size:17px;
     font-stretch: expanded 10px;
 }
-.container li:hover{
+.container a{
+    text-decoration: none;
+    color:white;
+}
+.container a:hover{
     color:rgb(248, 185, 12);
 }
 .container ul{
@@ -118,24 +124,28 @@ textarea{
 
 @media only screen and (min-width:800px){
     body{
-        width:80%;
+        width:90%;
         margin:auto;
     }
-    .column2{
-        display:none;
-    }
+    
     .container li{
         display: block;
     }
     .container img{
-        widows: 200px;
+        width: 200px;
         height:20%;
     }
-    .coulumn{
-        width:40%;
+    .row{
+        display: block;
+    }
+    .column{
+        width:50%;
+    }
+    .column img{
+        width:100%;
     }
 }
-@media only screen and (min-width:1000px){
+@media only screen and (min-width:900px){
     body{
         width:70%;
         margin:auto;
@@ -147,6 +157,7 @@ textarea{
         width: 220px;
         margin-right: 20px;
         margin-top: 1px;
+        
     }
      .container li{
           display:inline;
@@ -155,5 +166,10 @@ textarea{
         width:200px;
         height:200px;
     }
-    .column2{width:40%; float:left;font-size:16px;margin-bottom:40px;}
+    .column img{
+        width:100%; 
+    } 
+    .container a{
+        display:inline;
+    }
 }
